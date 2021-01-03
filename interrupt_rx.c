@@ -237,7 +237,7 @@ int main(void)
 
 	    /* Loop forever receiving frames. See NOTE 4 below. */
 	    while (1)
-	    {print2LCD(2,"s:%d ", rx_buffer[1]); };
+	    {};
 
 
 
@@ -286,7 +286,7 @@ static void rx_ok_cb(const dwt_cb_data_t *cb_data)
     {
         dwt_readrxdata(rx_buffer, cb_data->datalength, 0);
     }
-
+    print2LCD(2,"s:%d ", rx_buffer[1]);
     /* TESTING BREAKPOINT LOCATION #2 */
 }
 
